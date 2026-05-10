@@ -33,35 +33,34 @@
         </p>
         
         <div class="inline-block p-3 border border-gray-800 bg-gray-900 rounded-2xl shadow-2xl">
-            <img src="https://images.unsplash.com/photo-1521747116042-5a810fda9664" alt="LED Polo Project" class="rounded-xl max-w-full h-auto">
+            <img src="https://images.unsplash.com/photo-1521747116042-5a810fda9664" alt="LED Polo" class="rounded-xl max-w-full h-auto">
         </div>
     </header>
 
     <section class="py-16 px-6 bg-gray-900">
         <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
             <div>
-                <h2 class="text-2xl font-bold uppercase mb-4 border-l-4 border-orange-500 pl-4">Innovatie & Vakmanschap</h2>
+                <h2 class="text-2xl font-bold uppercase mb-4 border-l-4 border-orange-500 pl-4">Innovatie</h2>
                 <p class="text-gray-400">
-                    Als ondernemer in de bouw combineer ik hard werk met technologische vernieuwing. 
-                    Deze polo's maken gebruik van een uniek model-patent (BOIP Benelux) voor het samenstellen van materiaal met kleding.
+                    Als ondernemer combineer ik vakmanschap met technologische vernieuwing. 
+                    Deze polo's maken gebruik van een uniek model-patent.
                 </p>
             </div>
             <div>
                 <h2 class="text-2xl font-bold uppercase mb-4 border-l-4 border-orange-500 pl-4">Bestelling</h2>
                 <p class="text-gray-400 mb-6">
-                    Beperkte oplage voor de start van het WK 2026. Bestel vandaag en wees verzekerd van dit unieke verzamelitem.
+                    Beperkte oplage voor het WK 2026. Veilig betalen via PayPal.
                 </p>
                 <a href="https://www.paypal.com/ncp/payment/U7J26KG7CH4UW" class="inline-block text-orange-500 font-bold border-b-2 border-orange-500 pb-1 hover:text-white hover:border-white transition-all">
-                    Ga naar veilige betaling via PayPal &rarr;
+                    Direct bestellen via PayPal &rarr;
                 </a>
             </div>
         </div>
     </section>
 
     <footer class="py-10 text-center text-gray-600 text-sm border-t border-gray-800">
-        <p>&copy; 2024 Aannemer RDAM | LED-Polo Innovatie | BOIP Gecertificeerd</p>
+        <p>&copy; 2024 Aannemer RDAM | BOIP Gecertificeerd</p>
     </footer>
 
 </body>
 </html>
-
