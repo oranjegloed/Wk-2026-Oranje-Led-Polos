@@ -12,16 +12,26 @@
     </style>
 </head>
 <body>
+
     <nav class="p-5 border-b border-gray-800 bg-black flex justify-between items-center sticky top-0 z-50">
         <div class="font-black uppercase tracking-tighter text-xl text-white">Aannemer <span class="accent">RDAM</span></div>
-        <a href="https://www.paypal.com/ncp/payment/YD8CBSVSF3DPY" class="bg-accent text-black px-6 py-3 font-bold text-lg rounded-full shadow-lg hover:bg-orange-500 transition uppercase">BESTEL NU</a>
+        <a href="https://www.paypal.com/ncp/payment/YD8CBSVSF3DPY" class="bg-accent text-black px-6 py-3 font-bold text-lg rounded-full shadow-lg hover:bg-orange-500 transition uppercase block">
+            BESTEL NU
+        </a>
     </nav>
+
     <header class="py-20 px-6 max-w-4xl mx-auto text-center">
-        <h1 class="text-5xl md:text-7xl font-extrabold uppercase mb-6 leading-none">Structuur <span class="accent">Hersteld.</span></h1>
-        <p class="text-gray-400 text-lg mb-10">Eigenaar-directeur. Focus op bouwprojecten en gecertificeerd modelontwerp (BOIP).</p>
+        <h1 class="text-5xl md:text-7xl font-extrabold uppercase mb-6 leading-none">
+            Structuur <span class="accent">Hersteld.</span>
+        </h1>
+        <p class="text-gray-400 text-lg mb-10">
+            Eigenaar-directeur. Focus op bouwprojecten en gecertificeerd modelontwerp (BOIP).
+        </p>
+        
         <div class="inline-block p-2 bg-gray-900 rounded-2xl border border-gray-800">
             <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=400" class="rounded-xl shadow-2xl" alt="WK 2026 Polo">
         </div>
     </header>
+
 </body>
 </html>
