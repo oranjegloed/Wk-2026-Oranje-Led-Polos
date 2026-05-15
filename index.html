@@ -3,181 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oranje LED Polo - De Toekomst van Kleding</title>
+    <title>Premium LED Polo - Bestel Direct</title>
     <style>
         body {
             background-color: #000;
             color: #fff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
         }
-        .header-led {
+        .led-banner {
             background: #111;
             border-bottom: 2px solid #ff6600;
             padding: 15px 0;
             overflow: hidden;
-            white-space: nowrap;
         }
-        .marquee-text {
+        .marquee {
             color: #ff6600;
             font-family: 'Courier New', monospace;
-            font-size: 24px;
+            font-size: 22px;
             font-weight: bold;
             text-transform: uppercase;
         }
-        .container {
-            max-width: 900px;
+        .content {
+            max-width: 800px;
             margin: 0 auto;
             padding: 40px 20px;
-        }
-        .hero-section {
             text-align: center;
-            padding-bottom: 40px;
         }
         h1 {
             color: #ff6600;
-            font-size: 3rem;
-            margin-bottom: 10px;
+            font-size: 2.5rem;
             text-transform: uppercase;
+            margin-bottom: 20px;
         }
-        .highlight-box {
-            border: 2px solid #ff6600;
-            padding: 30px;
-            border-radius: 15px;
-            background: rgba(255, 102, 0, 0.05);
-            box-shadow: 0 0 20px rgba(255, 102, 0, 0.2);
-            margin-bottom: 40px;
-        }
-        .features {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin-top: 30px;
-        }
-        .feature-item {
-            background: #111;
-            padding: 20px;
-            border-left: 4px solid #ff6600;
-            border-radius: 5px;
-        }
-        .feature-item h3 {
-            color: #ff6600;
-            margin-top: 0;
-        }
-        .order-section {
+        .product-info {
             background: #1a1a1a;
-            padding: 40px;
-            border-radius: 15px;
-            text-align: center;
             border: 1px solid #333;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: left;
         }
-        select, button {
+        .product-info h2 {
+            color: #ff6600;
+            border-bottom: 1px solid #ff6600;
+            padding-bottom: 10px;
+        }
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        .feature-list li {
+            margin: 15px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        .feature-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #ff6600;
+            font-weight: bold;
+        }
+        .order-box {
+            background: #ff6600;
+            color: #000;
+            padding: 35px;
+            border-radius: 10px;
+        }
+        select, .btn {
             width: 100%;
-            max-width: 400px;
+            max-width: 350px;
             padding: 15px;
             margin: 10px 0;
             font-size: 18px;
-            border-radius: 8px;
+            font-weight: bold;
+            border-radius: 5px;
+            border: none;
         }
         select {
-            background: #333;
-            color: white;
-            border: 1px solid #ff6600;
+            background: #fff;
+            cursor: pointer;
         }
-        button {
-            background: #ff6600;
-            color: #000;
-            border: none;
-            font-weight: bold;
+        .btn {
+            background: #000;
+            color: #ff6600;
             cursor: pointer;
             text-transform: uppercase;
-            transition: 0.3s;
+            transition: 0.2s;
         }
-        button:hover {
-            background: #ff8533;
-            transform: scale(1.02);
+        .btn:hover {
+            background: #222;
         }
-        .footer {
-            text-align: center;
-            font-size: 12px;
-            color: #666;
-            margin-top: 50px;
-            padding-bottom: 20px;
+        #error-msg {
+            color: #000;
+            font-weight: bold;
+            display: none;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
 
-    <div class="header-led">
-        <marquee class="marquee-text" scrollamount="10">
-            +++ VAL OP IN HET DONKER +++ PROGRAMMEER JE EIGEN TEKST +++ ORANJE LED POLO NU BESCHIKBAAR +++ MAAT M TOT 3XL +++
+    <div class="led-banner">
+        <marquee class="marquee" scrollamount="10">
+            +++ VAL OP MET DE SCROLLING LED POLO +++ PROGRAMMEERBAAR VIA APP +++ ALLE MATEN BESCHIKBAAR M T/M 3XL +++ BESTEL VANDAAG +++
         </marquee>
     </div>
 
-    <div class="container">
-        <div class="hero-section">
-            <h1>De Oranje LED Polo</h1>
-            <p style="font-size: 1.2rem;">De ultieme combinatie van technologie, stijl en innovatie.</p>
+    <div class="content">
+        <h1>Scrolling LED Polo</h1>
+        <p>De nieuwe standaard in interactieve kleding.</p>
+
+        <div class="product-info">
+            <h2>Waarom kiezen voor de LED Polo?</h2>
+            <ul class="feature-list">
+                <li><strong>Smartphone Gestuurd:</strong> Pas uw tekst of logo direct aan via een gratis app (iOS & Android).</li>
+                <li><strong>Hoogwaardige Kwaliteit:</strong> Comfortabele stof met een naadloos weggewerkt LED-paneel.</li>
+                <li><strong>Lange Gebruiksduur:</strong> Krachtige accu voor urenlang plezier, oplaadbaar via USB.</li>
+                <li><strong>Uniek Design:</strong> Een officieel geregistreerd model, nergens anders verkrijgbaar.</li>
+            </ul>
         </div>
 
-        <div class="highlight-box">
-            <h2>Waarom dit het mooiste product van 2026 is:</h2>
-            <p>Onze LED-polo is niet zomaar kleding; het is een <strong>communicatiemiddel</strong>. Of je nu op een festival staat, een sportevenement bezoekt of je bedrijf wilt promoten: jij bepaalt wat de wereld ziet.</p>
+        <div class="order-box">
+            <h2 style="margin-top:0;">BESTEL DIRECT</h2>
+            <p>Kies uw maat om door te gaan naar de beveiligde betaling:</p>
             
-            <div class="features">
-                <div class="feature-item">
-                    <h3>Volledig Programmeerbaar</h3>
-                    <p>Via een simpele app op je telefoon verander je de tekst in seconden. Jouw naam, een actiecode of een groet; alles kan.</p>
-                </div>
-                <div class="feature-item">
-                    <h3>Premium Kwaliteit</h3>
-                    <p>Gemaakt van duurzaam materiaal dat comfortabel zit, ook tijdens lange dagen of 18-urige werkshifts.</p>
-                </div>
-                <div class="feature-item">
-                    <h3>Lange Batterijduur</h3>
-                    <p>De ingebouwde accu gaat urenlang mee en is eenvoudig op te laden via USB. Altijd klaar voor actie.</p>
-                </div>
-                <div class="feature-item">
-                    <h3>BOIP Gecertificeerd</h3>
-                    <p>Uniek ontwerp met officieel modelpatent. Je draagt een exclusief product dat nergens anders te vinden is.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="order-section">
-            <h2 style="color: #ff6600;">BESTEL JOUW MAAT</h2>
-            <p>Direct leverbaar in de maten Medium t/m XXX-Large.</p>
-            
-            <select id="sizeSelector">
-                <option value="">-- Kies uw maat --</option>
-                <option value="M">Medium (M)</option>
-                <option value="L">Large (L)</option>
-                <option value="XL">X-Large (XL)</option>
-                <option value="XXL">XX-Large (XXL)</option>
-                <option value="XXXL">XXX-Large (XXXL)</option>
+            <select id="sizeSelect">
+                <option value="">-- Selecteer uw maat --</option>
+                <option value="Medium">Medium (M)</option>
+                <option value="Large">Large (L)</option>
+                <option value="X-Large">X-Large (XL)</option>
+                <option value="XX-Large">XX-Large (XXL)</option>
+                <option value="XXX-Large">XXX-Large (XXXL)</option>
             </select>
 
-            <button onclick="checkSize()">DIRECT AFREKENEN VIA PAYPAL</button>
-            <p id="error" style="color: #ff4444; display: none; margin-top: 15px; font-weight: bold;">Selecteer a.u.b. een maat voordat u verder gaat.</p>
-        </div>
-
-        <div class="footer">
-            <p>&copy; 2026 S. Tadic - Gepatenteerd Design via BOIP Benelux</p>
+            <button class="btn" onclick="processOrder()">Afrekenen via PayPal</button>
+            <div id="error-msg">⚠️ Selecteer eerst een maat</div>
         </div>
     </div>
 
     <script>
-        function checkSize() {
-            const size = document.getElementById('sizeSelector').value;
-            const error = document.getElementById('error');
+        function processOrder() {
+            const size = document.getElementById('sizeSelect').value;
+            const error = document.getElementById('error-msg');
+            
             if (size === "") {
                 error.style.display = "block";
             } else {
                 error.style.display = "none";
-                // Jouw PayPal link
-                window.location.href = "https://www.paypal.com/ncp/payment/NYM5Q3TPRJRSE?custom=" + size;
+                // De link naar jouw PayPal checkout
+                window.location.href = "https://www.paypal.com/ncp/payment/NYM5Q3TPRJRSE?custom=" + encodeURIComponent(size);
             }
         }
     </script>
