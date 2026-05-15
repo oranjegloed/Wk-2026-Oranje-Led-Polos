@@ -1,48 +1,39 @@
-<!DOCTYPE html>
-<html lang="nl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WK 2026 Oranje LED-Polo</title>
-    <style>
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #f4f4f4; color: #333; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; }
-        .container { background-color: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 550px; width: 100%; text-align: center; border-top: 8px solid #ff6600; }
-        h1 { color: #ff6600; margin-bottom: 10px; font-size: 24px; }
-        .product-info { background-color: #fff5eb; padding: 15px; border-radius: 8px; margin: 20px 0; text-align: left; border-left: 5px solid #ff6600; }
-        .size-selection { margin: 25px 0; text-align: left; }
-        label { font-weight: bold; display: block; margin-bottom: 8px; font-size: 1.1em; }
-        select { width: 100%; padding: 12px; border-radius: 6px; border: 1px solid #ccc; font-size: 1em; background-color: #fff; }
-        .paypal-button { background-color: #0070ba; color: white; padding: 15px 30px; text-decoration: none; font-weight: bold; border-radius: 50px; display: inline-block; font-size: 1.2em; width: 100%; box-sizing: border-box; }
-        .footer { margin-top: 25px; font-size: 0.85em; color: #777; border-top: 1px solid #eee; padding-top: 15px; }
-    </style>
-</head>
-<body>
-<div class="container">
-    <h1>WK 2026 Oranje LED-Polo</h1>
-    <p>Programmeer je eigen teksten en animaties via de Bluetooth app. Dé ultieme gadget voor het komende WK!</p>
-    <div class="product-info">
-        <strong>Beschikbare Maten uit partij:</strong>
-        <ul>
-            <li>Medium (M)</li>
-            <li>Large (L)</li>
-            <li>Extra Large (XL)</li>
-            <li>Double Extra Large (XXL)</li>
-            <li>3XL (Extra Extra Extra Large)</li>
-        </ul>
-        <p><em>Let op: Vermeld uw gewenste maat bij de opmerkingen tijdens de betaling!</em></p>
-    </div>
-    <div class="size-selection">
-        <label for="size">Kies uw maat:</label>
-        <select id="size">
-            <option>Medium (M)</option>
-            <option>Large (L)</option>
-            <option>Extra Large (XL)</option>
-            <option>Extra Extra Large (XXL)</option>
-            <option>3XL (Extra Extra Extra Large)</option>
-        </select>
-    </div>
-    <a href="https://www.paypal.com/ncp/payment/NK4KVKV7S49Z6" class="paypal-button">Nu Bestellen & Betalen</a>
-    <div class="footer">Veilig betalen via PayPal. Uw bestelling wordt direct verwerkt.</div>
+<!-- Bestelsectie voor de LED Polo -->
+<div style="font-family: Arial, sans-serif; border: 1px solid #ff6600; padding: 20px; border-radius: 8px; max-width: 400px;">
+    <h2 style="color: #ff6600;">Oranje Scrolling LED Polo</h2>
+    <p>Selecteer uw maat om de bestelling af te ronden:</p>
+
+    <!-- Maat selectie menu -->
+    <select id="sizeSelector" style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;">
+        <option value="">-- Kies een maat --</option>
+        <option value="Medium">Medium (M)</option>
+        <option value="Large">Large (L)</option>
+        <option value="X-Large">X-Large (XL)</option>
+        <option value="XX-Large">XX-Large (XXL)</option>
+        <option value="XXX-Large">XXX-Large (XXXL)</option>
+    </select>
+
+    <!-- Betaalknop -->
+    <button onclick="redirectToPayPal()" style="background-color: #ff6600; color: white; border: none; padding: 12px 20px; width: 100%; font-size: 18px; font-weight: bold; border-radius: 4px; cursor: pointer;">
+        Bestel Nu via PayPal
+    </button>
+
+    <p id="error" style="color: red; display: none; margin-top: 10px;">Selecteer a.u.b. eerst een maat.</p>
 </div>
-</body>
-</html>
+
+<script>
+function redirectToPayPal() {
+    const size = document.getElementById('sizeSelector').value;
+    const errorMsg = document.getElementById('error');
+    const paypalBaseUrl = "https://www.paypal.com/ncp/payment/NYM5Q3TPRJRSE";
+
+    if (size === "") {
+        errorMsg.style.display = "block";
+    } else {
+        errorMsg.style.display = "none";
+        // We sturen de klant naar PayPal en voegen de maat toe als referentie
+        // Let op: Bij een standaard NCP link ziet PayPal dit als 'referrer'
+        window.location.href = paypalBaseUrl + "?custom=" + encodeURIComponent(size);
+    }
+}
+</script>
