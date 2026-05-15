@@ -1,11 +1,16 @@
-<!-- Bestelsectie voor de LED Polo -->
-<div style="font-family: Arial, sans-serif; border: 1px solid #ff6600; padding: 20px; border-radius: 8px; max-width: 400px;">
-    <h2 style="color: #ff6600;">Oranje Scrolling LED Polo</h2>
-    <p>Selecteer uw maat om de bestelling af te ronden:</p>
+<div style="font-family: 'Courier New', Courier, monospace; border: 3px solid #ff6600; padding: 20px; border-radius: 12px; max-width: 450px; background-color: #000; color: #ff6600; box-shadow: 0 0 15px #ff6600;">
+    
+    <!-- Het scrolende LED effect bovenin -->
+    <div style="background: #111; padding: 10px; border: 1px solid #333; overflow: hidden; white-space: nowrap; margin-bottom: 15px;">
+        <marquee scrollamount="8" style="font-size: 20px; font-weight: bold; text-transform: uppercase;">
+             ORANJE LED POLO - NU BESCHIKBAAR - M - L - XL - XXL - XXXL - BESTEL DIRECT - 
+        </marquee>
+    </div>
 
-    <!-- Maat selectie menu -->
-    <select id="sizeSelector" style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;">
-        <option value="">-- Kies een maat --</option>
+    <h3 style="text-align: center; color: #fff;">SELECTEER UW MAAT</h3>
+    
+    <select id="sizeSelector" style="width: 100%; padding: 12px; margin-bottom: 15px; background: #222; color: #fff; border: 1px solid #ff6600; font-size: 16px; border-radius: 5px;">
+        <option value="">-- Maak uw keuze --</option>
         <option value="Medium">Medium (M)</option>
         <option value="Large">Large (L)</option>
         <option value="X-Large">X-Large (XL)</option>
@@ -13,27 +18,30 @@
         <option value="XXX-Large">XXX-Large (XXXL)</option>
     </select>
 
-    <!-- Betaalknop -->
-    <button onclick="redirectToPayPal()" style="background-color: #ff6600; color: white; border: none; padding: 12px 20px; width: 100%; font-size: 18px; font-weight: bold; border-radius: 4px; cursor: pointer;">
-        Bestel Nu via PayPal
+    <button onclick="orderPolo()" style="background-color: #ff6600; color: #000; border: none; padding: 15px; width: 100%; font-size: 20px; font-weight: bold; cursor: pointer; border-radius: 5px; text-transform: uppercase;">
+        Naar Betalen
     </button>
 
-    <p id="error" style="color: red; display: none; margin-top: 10px;">Selecteer a.u.b. eerst een maat.</p>
+    <p id="error" style="color: #ff0000; display: none; text-align: center; margin-top: 10px; font-weight: bold;">⚠️ Selecteer eerst een maat!</p>
 </div>
 
 <script>
-function redirectToPayPal() {
+function orderPolo() {
     const size = document.getElementById('sizeSelector').value;
     const errorMsg = document.getElementById('error');
-    const paypalBaseUrl = "https://www.paypal.com/ncp/payment/NYM5Q3TPRJRSE";
-
+    
     if (size === "") {
         errorMsg.style.display = "block";
     } else {
         errorMsg.style.display = "none";
-        // We sturen de klant naar PayPal en voegen de maat toe als referentie
-        // Let op: Bij een standaard NCP link ziet PayPal dit als 'referrer'
-        window.location.href = paypalBaseUrl + "?custom=" + encodeURIComponent(size);
+        // We slaan de maat even op in het geheugen van de browser voor de zekerheid
+        localStorage.setItem('selectedSize', size);
+        
+        // De PayPal link
+        const paypalUrl = "https://www.paypal.com/ncp/payment/NYM5Q3TPRJRSE";
+        
+        // Doorsturen
+        window.location.href = paypalUrl;
     }
 }
 </script>
